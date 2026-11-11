@@ -1,40 +1,60 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="Over Mij"
-	description="Over Mij"
-	pubDate={new Date('11 November 2026')}
->
-	<h3> Steffen Witvliet. 35 Jaar. Passie voor Technologie, Sport en Psychologie. </h3>
+<!doctype html>
+<html lang="en">
+	<head>
+		<img  id="logo" src="/logo.png" width="200px" height="200px" alt="Logo - Balans 4 Jezelf"/>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header/>
 
-	<ul>
-		<h4> Studie leven: </h4>
-		<li> Student Civas online - lifecoach - Psychologie | 2026 - 2027 
-		</li>
-		<li> Oud student HAN, Arnhem | 2008 - 2011 CMD </li>
-		<li> Oud student Hanzehogeschool, Groningen | 2012 - 2017 </li>
-	</ul>
+		<main>
+			<h3> Steffen Witvliet. 35 Jaar. Passie voor Technologie, Sport en Psychologie. </h3>
 
-	<ul>
-		<h4> Werkend leven: </h4>
-		<b> ICT werk</b>
-		<li> Bij verschillende ICT bedrijven gewerkt; projecten voor 	Flixbus, Internationale agrarische projecten  | 2017 - 2021 </li>
+			<ul>
+				<h4> Studie leven: </h4>
+				<li> Student Civas online - lifecoach - Psychologie | 2026 - 2027 
+				</li>
+				<li> Oud student HAN, Arnhem | 2008 - 2011 CMD </li>
+				<li> Oud student Hanzehogeschool, Groningen | 2012 - 2017 </li>
+			</ul>
 
-		<br/>
+			<ul>
+				<h4> Werkend leven: </h4>
+				<b> ICT werk</b>
+				<li> Bij verschillende ICT bedrijven gewerkt; projecten voor 	Flixbus, Internationale agrarische projecten  | 2017 - 2021 </li>
 
-		<b> Teamleider bij verschillende bedrijven </b>
-		<li> DPD in corona tijd | Berkel en Rodenrijs | 2021 - 2022 </li>
-		<li> Scapino | Berkel en Rodenrijs | 2022 - 2025 </li>
-		<li> Action | Goor en Lochem | 2025 - 2026 </li>
-		<li> Daka | Beuningen | 2026 - 2027 </li>
-	</ul>
+				<br/>
 
-</Layout>
+				<b> Teamleider bij verschillende bedrijven </b>
+				<li> DPD in corona tijd | Berkel en Rodenrijs | 2021 - 2022 </li>
+				<li> Scapino | Berkel en Rodenrijs | 2022 - 2025 </li>
+				<li> Action | Goor en Lochem | 2025 - 2026 </li>
+				<li> Daka | Beuningen | 2026 - 2027 </li>
+			</ul>
+		</main>
+		
+	</body>
+
+	<Footer/>
+
+</html>
 
 <style>
 	h3 {
 		font-size: 1.2em;
+	}
+
+	#logo {
+	border: 2px solid #000;
+	position: absolute;
+	left: 25px;
+	top: 25px;
 	}
 </style>
